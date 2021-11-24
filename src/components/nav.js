@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../images/marvelLogo.svg'
+
 const Nav = () => {
+
+    
     return (
         <nav className="navbar">
             <div className="logo">

@@ -1,6 +1,6 @@
 const initialState = {
     characters:[],
-    searchedCharacters:[],
+    searchedCharacter:[],
 
 };
 
@@ -11,6 +11,11 @@ const charactersReducer = (state=initialState, action) => {
                 ...state,
                 characters:action.payload.characters
             }
+            case 'SEARCHED_CHARACTER':
+                return {
+                    ...state,
+                    searchedCharacter:action.payload.searchedCharacter
+                }
         default:
             return state;
     }

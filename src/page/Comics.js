@@ -1,22 +1,28 @@
-import React from 'react'
-import { useSelector } from "react-redux";
-import Comic from '../components/comics/comic.js'
-const Comics = () => {
+import React,{useEffect,useState} from 'react'
+import { useDispatch} from "react-redux";
+import { loadComics } from "../action/comicsAction";
+import ComicsList from '../components/comics/comicsList';
+import Loading from '../components/loading'
 
-    const {comics} = useSelector(state => state.comics);
-    console.log(comics);
+
+const Comics = () => {
+    const dispatch = useDispatch();
+    const [isLoading,setIsLoading] = useState(true);
+    useEffect(()=>{
+        dispatch(loadComics());
+        setIsLoading(false)
+
+        return () => {
+          
+        }
+  },[dispatch])
+
+    
+    
     return (
         <section className="comics-section">
-               <h1 className="title">Comics</h1>
-             <div className="comics-list">
-             {comics.map((comic) => {
-                    return  <Comic key={comic.id}  
-                    title={comic.title} 
-                    path={comic.thumbnail.path} 
-                    extension={comic.thumbnail.extension}></Comic>
-                })}
-
-             </div>
+            {isLoading ? <Loading></Loading> : <ComicsList></ComicsList>}
+           
         </section>
     )
 }
