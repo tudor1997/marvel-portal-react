@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Comic = ({title,path,extension}) => {
+const Comic = ({title,path,extension, id}) => {
 
     const image= `${path}.${extension}`
 
@@ -12,7 +12,7 @@ const Comic = ({title,path,extension}) => {
             </div>
             <div className="info">
                 <h1>{title}</h1>
-                <Link className="details">Details</Link>
+                <Link to={`/comics/${id}`} className="details">Details</Link>
             </div>
         </article>
     )

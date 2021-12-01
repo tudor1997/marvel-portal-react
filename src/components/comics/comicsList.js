@@ -12,6 +12,7 @@ const ComicsList = () => {
              <div className="comics-list">
              { comics.map((comic) => {
                     return  <Comic key={comic.id}  
+                    id={comic.id}
                     title={comic.title} 
                     path={comic.thumbnail.path} 
                     extension={comic.thumbnail.extension}></Comic>

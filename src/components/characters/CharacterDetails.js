@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { getCharacter } from "../../action/characterDetailsAction";
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
+
 
 const CharacterDetails = () => {
   const dispatch = useDispatch();

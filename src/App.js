@@ -8,6 +8,7 @@ import Characters from './page/Characters';
 import Comics from './page/Comics';
 import Series from './page/Series';
 import CharacterDetails from "./components/characters/CharacterDetails";
+import ComicDetails from './components/comics/comicDetails';
 import SeriesDetails from "./components/series/seriesDetails";
 function App() {
 
@@ -26,8 +27,11 @@ function App() {
         <Route exact path="/characters/:id">
           <CharacterDetails/>
         </Route>
-        <Route path="/comics">
+        <Route exact path="/comics">
           <Comics/>
+        </Route>
+        <Route  path="/comics/:id">
+          <ComicDetails/>
         </Route>
         <Route exact path="/series">
           <Series/>
