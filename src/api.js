@@ -18,7 +18,7 @@ export const getCharacterDetails = (id) => `${baseAPI}/v1/public/characters/${id
 
 // Comics
 export const comicListAPI = `${baseAPI}/v1/public/comics?ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`;
-export const getComicAPI = (name) => `${baseAPI}/v1/public/comics?nameStartsWith=${name}&ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`;
+export const getComicAPI = (name) => `${baseAPI}/v1/public/comics?titleStartsWith=${name}&ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`;
 
 // Get Comic
 export const getComicDetails = (id) => `${baseAPI}/v1/public/comics/${id}?ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`;

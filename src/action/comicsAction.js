@@ -1,4 +1,4 @@
-import {comicListAPI} from '../api'
+import {comicListAPI,getComicAPI} from '../api'
 
 
 export const loadComics = () => async (dispatch) =>{
@@ -14,5 +14,21 @@ export const loadComics = () => async (dispatch) =>{
             comics:comicList
         }
     })
+
+}
+
+export const loadSearchedComic = (name) => async (dispatch) => {
+    const result = await fetch(getComicAPI(name));
+    const data = await result.json();
+
+   const searchedComic = data.data.results;
+   
+   dispatch({
+       type:"SEARCHED_COMIC",
+       payload:{
+           searchedComic:searchedComic,
+       }
+   })
+
 
 }

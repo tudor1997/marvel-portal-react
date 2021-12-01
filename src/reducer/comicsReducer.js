@@ -1,4 +1,7 @@
-const initialState = {comics:[]}
+const initialState = {
+    comics:[],
+    searchedComic:[]
+}
 
 
 const comicsReducer = (state=initialState, action) => {
@@ -8,6 +11,11 @@ const comicsReducer = (state=initialState, action) => {
                 ...state,
                 comics:action.payload.comics
             };
+        case "SEARCHED_COMIC":
+            return{
+                ...state,
+                searchedComic:action.payload.searchedComic
+            }
         default:
             return {...state};
     }

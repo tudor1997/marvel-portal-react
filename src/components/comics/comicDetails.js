@@ -60,7 +60,7 @@ const ComicDetails = () => {
                       
                     return (
                    
-                        <p key={index}> {item.length > 0 ? item.name : ("No character has been found")} </p>
+                        <p key={index}> {item.name} </p>
                   
                     );
                   })}

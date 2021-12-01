@@ -497,6 +497,59 @@ html {
             opacity:1;
         }
     }
+    .form-container{
+        width:100%;
+        display:flex;
+        justify-content:space-evenly;
+        form{
+            input{
+                width: 60%;
+                padding: 2px 4px;
+                border: none;
+                border-bottom: 2px solid black;
+                outline: none;
+                font-family: "Montserrat", sans-serif;
+                font-size: 19px;
+                transition: all 0.2s ease-in;
+                &:focus{
+                    border-bottom: 2px solid $red;
+                }
+            }
+            
+            button{
+                border: none;
+                color: white;
+                background: #da0707;
+                font-size: 19px;
+                cursor: pointer;
+                padding: 5px 15px;
+                margin-left: 15px;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    background: #2e3333;
+                }
+            }
+        }
+        .clear{
+            width:auto;
+            height:50px;
+            margin-right:40px;
+            padding:5px 10px;
+            font-family:$main-font;
+            font-size:17px;
+            font-weight: 600;
+            background:$red;
+            color:white;
+            border:1px solid black;
+            border-radius:9px;
+            cursor:pointer;
+            transition:all .3s ease-in;
+            &:hover{
+                background:#393939;
+                
+            }
+        }
+    }
     .title{
         margin:30px auto;
         font-family: $second-font;
