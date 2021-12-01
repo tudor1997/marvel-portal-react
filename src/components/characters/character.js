@@ -1,10 +1,10 @@
 import React from 'react'
-
-const Character = ({name, image, extension}) => {
+import { Link } from 'react-router-dom'
+const Character = ({name, image, extension, id}) => {
     const characterImg = `${image}.${extension}`
    
     return (
-        <article className="character">
+        <Link to={`/characters/${id}`} className="character">
             <div className="image">
             <img src={characterImg} alt={name} />
             </div>
@@ -14,7 +14,7 @@ const Character = ({name, image, extension}) => {
             <h1 className="name">{name}</h1>
             </div>
      
-        </article>
+        </Link>
     )
 }
 

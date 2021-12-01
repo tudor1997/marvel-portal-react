@@ -11,12 +11,16 @@ const CharactersList = () => {
                 return  <Character key={item.id}
                 name={item.name} 
                 image={item.thumbnail.path} 
-                extension={item.thumbnail.extension} ></Character>
+                extension={item.thumbnail.extension} 
+                id={item.id}>
+                </Character>
             }) : characters.map((item) => {
                  return  <Character key={item.id}
                   name={item.name} 
                   image={item.thumbnail.path} 
-                  extension={item.thumbnail.extension} ></Character>
+                  extension={item.thumbnail.extension} 
+                  id={item.id}>
+                  </Character>
                })}
                
                

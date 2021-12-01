@@ -10,7 +10,11 @@ const baseAPI = "http://gateway.marvel.com";
 
 // Characters
 export const characterListAPI = `${baseAPI}/v1/public/characters?ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`
-export const getCharacterAPI = (name) => `${baseAPI}/v1/public/characters?name=${name}&ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`;
+export const getCharacterAPI = (name) => `${baseAPI}/v1/public/characters?nameStartsWith=${name}&ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`;
+
+// Get Character
+export const getCharacterDetails = (id) => `${baseAPI}/v1/public/characters/${id}?ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`;
+
 
 // Comics
 export const comicListAPI = `${baseAPI}/v1/public/comics?ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`;

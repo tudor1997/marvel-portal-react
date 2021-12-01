@@ -1,4 +1,4 @@
-import { characterListAPI , getCharacterAPI} from "../api";
+import { characterListAPI , getCharacterAPI } from "../api";
 
 export const loadCharacters = () => async (dispatch) => {
     
