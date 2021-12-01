@@ -10,7 +10,7 @@ export const getCharacter = (id) => async (dispatch) => {
    dispatch({
        type:"GET_DETAILS",
        payload:{
-           details: characterDetails.results,
+           characterDetails: characterDetails.results,
          
        }
    })

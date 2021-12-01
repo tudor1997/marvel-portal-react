@@ -6,9 +6,9 @@ import Nav from "./components/nav";
 import Home from './page/Home';
 import Characters from './page/Characters';
 import Comics from './page/Comics';
-import Movies from './page/Movies';
+import Series from './page/Series';
 import CharacterDetails from "./components/characters/CharacterDetails";
-
+import SeriesDetails from "./components/series/seriesDetails";
 function App() {
 
 
@@ -29,8 +29,11 @@ function App() {
         <Route path="/comics">
           <Comics/>
         </Route>
-        <Route path="/movies">
-          <Movies/>
+        <Route exact path="/series">
+          <Series/>
+        </Route>
+        <Route path="/series/:id">
+          <SeriesDetails/>
         </Route>
       </Switch>
     </Router>

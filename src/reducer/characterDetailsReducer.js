@@ -1,5 +1,5 @@
 const initialState = {
-      characterDetails: {details:[]},
+      characterDetails: {characterDetails:[]},
 }
 
 const CharacterDetailsReducer = (state=initialState, action) => {
@@ -7,7 +7,7 @@ const CharacterDetailsReducer = (state=initialState, action) => {
         case 'GET_DETAILS':
                 return {
                     ...state,
-                    characterDetails: action.payload.details
+                    characterDetails: action.payload.characterDetails
                 };
             default: 
             return {...state};
