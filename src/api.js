@@ -5,7 +5,7 @@ const apiKeyPublic ="0e2aa57ed44123c1cf41fa3e3fdc500d"
 const hash = md5(time_stamp + apiKeyPrivate + apiKeyPublic);
 
 
-const baseAPI = "https://gateway.marvel.com";
+const baseAPI = "http://gateway.marvel.com";
 
 
 // Characters
