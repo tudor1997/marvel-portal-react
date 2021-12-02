@@ -16,7 +16,6 @@ const ComicDetails = () => {
   const details = Array.from(comicDetails);
   return (
     <section className="comic-details-container">
-
       {details &&
         details.map((item) => {
           const { title, thumbnail, characters, prices, urls, textObjects } =
@@ -37,42 +36,41 @@ const ComicDetails = () => {
                     })}
                   </div>
                 </div>
-               
-       
-                  {textObjects.map((item, index) => {
-                    const text = item.text;
-                    
-                    return (
-                        <div key={index} className="text">
-   
-                            {textObjects ? <p>{text}</p> : <p>Sorry, no description was given at this time.</p>}
-                
-                      </div>
-                    );
-                  })}
-            
+
+                {textObjects.map((item, index) => {
+                  const text = item.text;
+
+                  return (
+                    <div key={index} className="text">
+                      {textObjects.length >= 1 ? (
+                        <p>{text}</p>
+                      ) : (
+                        <p>Sorry, no description was given at this time.</p>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
-               <div className="characters">
-                    <h3>Characters:</h3>
-                 <div className="characters-list">
-                 {items &&
-                  items.map((item, index) => {
-                      
-                    return (
-                   
-                        <p key={index}> {item.name} </p>
-                  
-                    );
-                  })}
-                 </div>
-            
-              </div> 
+              <div className="characters">
+                {items.length >= 1 && <h3>Characters:</h3>}
+                <div className="characters-list">
+                  {items &&
+                    items.map((item, index) => {
+                      return <p key={index}> {item.name} </p>;
+                    })}
+                </div>
+              </div>
               <div className="urls">
-                  
                 {urls &&
                   urls.map((url, index) => {
                     return (
-                      <a className="url" key={index} href={url.url} target="_blank" rel="noreferrer">
+                      <a
+                        className="url"
+                        key={index}
+                        href={url.url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         {url.type}
                       </a>
                     );
