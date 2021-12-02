@@ -25,7 +25,7 @@ export const getComicDetails = (id) => `${baseAPI}/v1/public/comics/${id}?ts=${t
 
 // Series
 export const seriesListAPI = `${baseAPI}/v1/public/series?ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`;
-export const getSeriesAPI = (name) => `${baseAPI}/v1/public/series?nameStartsWith=${name}&ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`;
+export const getSeriesAPI = (name) => `${baseAPI}/v1/public/series?titleStartsWith=${name}&ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`;
 
 // Get Series
 export const getSeriesDetails = (id) => `${baseAPI}/v1/public/series/${id}?ts=${time_stamp}&apikey=${apiKeyPublic}&hash=${hash}`;

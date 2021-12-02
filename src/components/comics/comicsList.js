@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import Comic from './comic.js'
-import { useSelector } from "react-redux";
-import {useDispatch} from 'react-redux';
+import { useSelector,useDispatch } from "react-redux";
+
 import {loadSearchedComic, loadComics} from '../../action/comicsAction'
 const ComicsList = () => {
     const [text,setText] = useState('');
