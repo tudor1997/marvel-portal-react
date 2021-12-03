@@ -7,7 +7,7 @@ export const loadSeries = () => async (dispatch) => {
     const data = await result.json();
 
     const seriesList = data.data.results;
-
+    console.log(seriesList);
     dispatch({
         type:"FETCH_SERIES",
         payload:{
