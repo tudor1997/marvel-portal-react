@@ -18,6 +18,7 @@ const SeriesDetails = () => {
             {details && details.map((item) => {
                 const {title, description, thumbnail, urls, characters} = item;
                 const {path, extension} = thumbnail;
+                console.log(path);
                 const image = `${path}.${extension}`;
                 const {items} = characters;
 
