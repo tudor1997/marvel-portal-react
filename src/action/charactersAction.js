@@ -5,7 +5,7 @@ export const loadCharacters = () => async (dispatch) => {
     // Fetch characters
     const result = await fetch(characterListAPI);
     const data = await result.json();
-    const characterList = data.data.results
+    const characterList = data.data.results;
    
     
 
